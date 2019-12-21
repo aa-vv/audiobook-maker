@@ -6,7 +6,6 @@
 
 # Instruction
 
-
 ## Download Videos
 
 If you want to make an audiobook out of videos, please first download the videos as mp4.
@@ -24,7 +23,7 @@ Visit [m4b-tool](https://github.com/sandreas/m4b-tool) and install the latest ve
 Then follow the instruction on its page to set up folder structure and run the following command:
 
 ```bash
-m4b-tool merge "m4b/input/" --output-file="m4b/audiobook.m4b"
+m4b-tool merge "m4b/input/" --output-file="m4b/audiobook.m4b" --use-filenames-as-chapters --jobs=16
 ```
 
-The tool will generate a chapters.txt if none is given as input, which describe the timeline of the audiobook. You may want to modify this file to add chapter names and run the above command again. If chapters.txt is given, the program will use it instead of creating a new one.
+The tool will generate a chapters.txt if none is given as input, which describe the timeline of the audiobook. It will use filenames as chapter names as specified above. The --jobs option defines the number of commands to run simultaneously. You can choose a number suitable for your hardware setup.
